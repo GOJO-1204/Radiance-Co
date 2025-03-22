@@ -1,0 +1,399 @@
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+:root {
+    --primary-color: #cdb4db;
+    --secondary-color: #ffc8dd;
+    --accent-color: #ffafcc;
+    --light-color: #bde0fe;
+    --dark-color: #333;
+    --text-color: #fff;
+    --font-primary: 'Poppins', sans-serif;
+}
+
+/* Reset Default Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--font-primary);
+    text-decoration: none;
+    list-style: none;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #fff;
+}
+
+/* Navigation Bar */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 8%;
+    background: #fff;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 28px;
+    font-weight: 600;
+    color: var(--dark-color);
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+}
+
+.nav-links {
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links li a {
+    color: var(--dark-color);
+    font-size: 16px;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.nav-links li a:hover {
+    color: var(--primary-color);
+}
+
+.btn-appointment {
+    background: var(--primary-color);
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 20px;
+    font-weight: 600;
+    margin-left: 20px;
+    transition: 0.3s;
+}
+
+.btn-appointment:hover {
+    background: var(--accent-color);
+}
+
+/* Hero Section */
+.hero {
+    background: url('https://www.webnode.com/blog/wp-content/uploads/2022/07/Salon-Main2.png') no-repeat center center/cover;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    text-align: center;
+    color: var(--text-color);
+}
+
+.overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+}
+
+.hero-content h1 {
+    font-size: 48px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.hero-content p {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.btn {
+    background: var(--secondary-color);
+    color: var(--dark-color);
+    padding: 12px 25px;
+    border-radius: 20px;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: var(--accent-color);
+}
+
+/* Information Section */
+#information {
+    background-color: #f8f5f2;
+    padding: 80px 10%;
+}
+
+.info-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px;
+}
+
+.info-text {
+    flex: 1;
+    max-width: 50%;
+}
+
+.info-text h2 {
+    font-size: 2.5rem;
+    color: #333;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.info-text p {
+    font-size: 1.1rem;
+    color: #555;
+    line-height: 1.6;
+}
+
+.info-image {
+    flex: 1.5; /* Increased flex value to make the image section larger */
+    text-align: right;
+}
+
+.info-image img {
+    width: 100%;
+    max-width: 600px; /* Increased max-width */
+    border-radius: 10px;
+}
+
+
+/* Services Section */
+.services {
+    text-align: center;
+    padding: 60px 20px;
+    background-color: #fdfaf5;
+}
+
+.services h2 {
+    text-transform: uppercase;
+    font-size: 14px;
+    color: #555;
+    letter-spacing: 1px;
+}
+
+.services h3 {
+    font-size: 36px;
+    font-weight: 600;
+    margin-bottom: 30px;
+    color: #333;
+}
+
+.service-container {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.service {
+    text-align: center;
+    width: 250px;
+}
+
+.service img {
+    width: 80px; /* Adjust size as needed */
+    height: auto;
+    margin-bottom: 15px;
+}
+
+.service h4 {
+    font-size: 20px;
+    font-weight: bold;
+    color: #222;
+}
+
+.service p {
+    font-size: 14px;
+    color: #555;
+    line-height: 1.6;
+}
+
+/* Meet Our Experts Section */
+h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    color: #333;
+    text-transform: uppercase;
+}
+
+.expert-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+.expert {
+    flex: 1 1 calc(20% - 20px); /* Each expert will take 20% width */
+    max-width: 220px; /* Prevents items from becoming too large */
+    background: #fff;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.expert img {
+    width: 100%;
+    height: 180px; /* Set a uniform height for images */
+    object-fit: cover; /* Ensures images maintain aspect ratio */
+    border-radius: 10px;
+}
+
+.expert h3 {
+    margin-top: 10px;
+    font-size: 18px;
+    color: #333;
+}
+
+.expert p {
+    font-size: 14px;
+    color: #666;
+}
+
+
+
+/* Appointment Section */
+.contact {
+    background: linear-gradient(to right, #ffc8dd, #bde0fe);
+    text-align: center;
+    padding: 50px 20px;
+    border-radius: 10px;
+    margin: 40px auto;
+    max-width: 900px;
+}
+
+.contact h2 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.contact span {
+    color: #ffafcc;
+    font-weight: bold;
+}
+
+.contact p {
+    font-size: 1.1rem;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+.contact-form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.form-group {
+    flex: 1 1 300px;
+    text-align: left;
+}
+
+.form-group label {
+    display: block;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.form-group i {
+    margin-right: 5px;
+    color: #ffafcc;
+}
+
+.form-group input,
+.form-group select {
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.btn {
+    display: inline-block;
+    background: #ffafcc;
+    color: #fff;
+    padding: 12px 25px;
+    font-size: 1rem;
+    text-decoration: none;
+    border-radius: 25px;
+    transition: 0.3s ease;
+    border: none;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background: #cdb4db;
+}
+
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .nav-links {
+        gap: 15px;
+    }
+
+    .hero-content h1 {
+        font-size: 36px;
+    }
+
+    .hero-content p {
+        font-size: 16px;
+    }
+
+    .services-container {
+        flex-direction: column;
+    }
+
+    .service {
+        width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        padding: 15px;
+    }
+
+    .navbar {
+        flex-direction: column;
+        margin-top: 10px;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .btn-appointment {
+        margin-left: 0;
+        margin-top: 10px;
+    }
+
+    .info-icons {
+        flex-direction: column;
+    }
+}
